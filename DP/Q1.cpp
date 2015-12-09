@@ -24,12 +24,10 @@ int minCoins(int coins[], int n,int sum){
 	return out;
 }
 
-int main()
-{
+int main(){
 	int coins[] =  {1, 3, 5};
     int n = sizeof(coins)/sizeof(coins[0]);
-    int sum= 131300000;
+    int sum= 134;
     cout << "Minimum coins required is \n"<< minCoins(coins, n, sum)<<"\n";
     return 0;
 }
-
