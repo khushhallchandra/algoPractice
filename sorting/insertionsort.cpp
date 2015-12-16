@@ -5,11 +5,18 @@
 using namespace std;
 
 void i_sort(vector<int>& data,int n){
-	for(int i=0;i<n;i++){
-		//cout<<data[i] << endl;
-		data[i]=0;
+	int val,j;
+	for(int i=1;i<n;i++){
+		val = data[i];
+		for(j=i-1; j>=0;j--){
+			if(val < data[j] ){
+				data[j+1] = data[j];
+			}
+			else				
+				break;
+			data[j] = val;
+		}
 	}
-
 }
 
 int main(){
@@ -22,7 +29,6 @@ int main(){
 		vec.push_back(val);    
 	}
 	int n=vec.size();
-	cout << n << endl;
 	i_sort(vec,n);
 	cout << "Sorted data:" << endl;
 	for(int i=0;i<n;i++){
