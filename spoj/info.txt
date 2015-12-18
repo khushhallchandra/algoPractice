@@ -1,0 +1,1 @@
+This folder contains simple problems from spoj ( starter for competitve programming)
