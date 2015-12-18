@@ -47,8 +47,7 @@ void m_sort(vector<int>& data,int start, int end){
 		int mid = start + (end - start)/2; 
         m_sort(data, start, mid);
         m_sort(data, mid+1, end);
-        merge(data, start, mid, end);		
-
+        merge(data, start, mid, end);
 	}	
 }
 
@@ -57,13 +56,14 @@ int main(){
 	int i;
 	std::ifstream infile("input.txt");
 	int val;
-	while (infile >> val)
-	{
+
+	while (infile >> val){
 		vec.push_back(val);    
 	}
 	int n=vec.size();
 	m_sort(vec,0,n-1);
 	cout << "Sorted data:" << endl;
+	
 	for(int i=0;i<n;i++){
 		cout<<vec[i] << endl;		
 	}
