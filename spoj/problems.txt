@@ -4,3 +4,5 @@
 
 3. addrev.cpp      -> http://www.spoj.com/problems/ADDREV/
 
+4. div.cpp 	   -> http://www.spoj.com/problems/SMPDIV/
+
