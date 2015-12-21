@@ -1,3 +1,6 @@
 1. countZeroes.cpp -> http://www.spoj.com/problems/FCTRL
 
-2. sop.cpp	   -> http://www.spoj.com/problems/SUMPRO/
+2. sop.cpp	   -> http://www.spoj.com/problems/SUMPRO
+
+3. addrev.cpp      -> http://www.spoj.com/problems/ADDREV/
+
