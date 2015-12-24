@@ -46,11 +46,10 @@ void build_maxheap(vector<int>& data, int n){
 
 int main(){
       vector<int> vec;
-      int i;
       std::ifstream infile("input.txt");
       int val;
-
       vec.push_back(-1); // just storing some value at 0 position
+
       while (infile >> val){
             vec.push_back(val);    
       }
