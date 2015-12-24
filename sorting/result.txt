@@ -1,0 +1,37 @@
+Running all sorting algorithm on input size of 40,000 
+
+ bubblesort
+
+real	0m29.040s
+user	0m28.534s
+sys	0m0.100s
+
+ heapsort
+
+real	0m0.611s
+user	0m0.048s
+sys	0m0.048s
+
+ mergesort
+
+real	0m0.652s
+user	0m0.132s
+sys	0m0.069s
+
+ quicksort
+
+real	0m0.593s
+user	0m0.035s
+sys	0m0.048s
+
+ selectionsort
+
+real	0m8.047s
+user	0m7.633s
+sys	0m0.086s
+
+ insertionsort
+
+real	0m13.816s
+user	0m13.366s
+sys	0m0.092s
