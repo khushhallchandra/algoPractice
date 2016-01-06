@@ -1,54 +1,52 @@
-#include <iostream>
+#include<iostream>
+#include<fstream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-void print(int *input, int n){
-    for (int i = 0; i < n; i++)
-        cout << input[i] << "\t";
-    }
+void digitSort(vector<int>& data, int n, int pos_mul){
+      vector <int> output(n);
+      int digits[10] = {0};
+ 
+      for (int i = 0; i < n; i++)
+          digits[ (data[i]/pos_mul)%10 ]++;
+      //cumulative addition to find the position
+      for (int i = 1; i < 10; i++)
+          digits[i] += digits[i - 1];
 
-void radixsort(int *input, int n){
-    int i;
+      for (int i = n - 1; i >= 0; i--)    {
+          output[digits[ (data[i]/pos_mul)%10 ] - 1] = data[i];
+          digits[ (data[i]/pos_mul)%10 ]--;
+      }
 
-    int maxNumber = input[0];
-    for (i = 1; i < n; i++){
-        if (input[i] > maxNumber)
-            maxNumber = input[i];
-    }
+      for (int i = 0; i < n; i++)
+          data[i] = output[i];
+}
+ 
+void radix_sort(vector<int>& data, int n){
+      int m = *max_element(data.begin(),data.end());
 
-  int exp = 1;
-  int *tmpBuffer = new int[n];
-  while (maxNumber / exp > 0){
-    int decimalBucket[10] = {  0 };
-    // count the occurences in this decimal digit.
-    for (i = 0; i < n; i++)
-      decimalBucket[input[i] / exp % 10]++;
-
-    // Prepare the position counters to be used for re-ordering the numbers for this decimal place.
-    for (i = 1; i < 10; i++)
-      decimalBucket[i] += decimalBucket[i - 1];
-
-    // Re order the numbers in the tmpbuffer and later copy back to original buffer.
-    for (i = n - 1; i >= 0; i--)
-      tmpBuffer[--decimalBucket[input[i] / exp % 10]] = input[i];
-    for (i = 0; i < n; i++)
-      input[i] = tmpBuffer[i];
-
-    exp *= 10;
-
-  }
+      for (int i = 1; m/i > 0; i *= 10)
+          digitSort(data, n, i);
 }
 
-const int INPUT_SIZE = 10;
+int main(){
+      vector<int> vec;
+      int i;
+      std::ifstream infile("input.txt");
+      int val;
 
-int main()
-{
-  int input[INPUT_SIZE] = {143, 123, 222, 186, 235, 9, 905, 428, 543, 373};
-  cout << "Input: ";
-  print(input, INPUT_SIZE);
-  radixsort(input,INPUT_SIZE);
-  cout << "\nOutput: ";
-  print(input, INPUT_SIZE);
-  cout << "\n";
-  return 0;
+      while (infile >> val){
+            vec.push_back(val);    
+      }
+
+      int n = vec.size();
+      radix_sort(vec,n);
+      cout << "Sorted data:" << endl;
+      
+      for(int i=0;i<n;i++){
+            cout<<vec[i] << endl;         
+      }
+      return 0;    
 }
