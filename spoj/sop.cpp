@@ -1,23 +1,25 @@
-# include <iostream>
-
+#include<bits/stdc++.h>
 using namespace std;
+ 
+int main(void){
+	int cases, num, quo,next;
+	long long int sum;
+	cin>>cases;
+	while(cases--){
+		sum=0;
+		cin>>num;
+		for(int i=1;i<=num;){
+			quo=num/i;
+			next=num/(i+1);
+			sum+=((long long)i*(quo-next)*(next+quo+1))/2;
 
-unsigned long long int sop(unsigned long long int num){
-	unsigned long long int sum = 0, q;
-	for(unsigned long long int i = 1; i <= num; i++){
-		q = num/i;
-		sum = sum + (i * q);
-	}
-	return sum;
-}
-
-int main(){
-	int N;
-	cin >> N;
-	for(int i = 0; i < N; i++){
-		unsigned long long int num;
-		cin >> num;
-		cout<< sop(num)%1000000007 <<endl;
+			if(quo==next)
+				i=num/quo;
+			else
+				i++;
+		}
+		sum%=1000000007;
+		cout<<sum<<endl;
 	}
 	return 0;
 }
