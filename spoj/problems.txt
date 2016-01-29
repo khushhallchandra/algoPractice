@@ -6,3 +6,5 @@
 
 4. div.cpp 	   -> http://www.spoj.com/problems/SMPDIV/
 
+5. oddDivisor.cpp  -> https://www.hackerearth.com/problem/algorithm/dipu-and-interesting-numbers-2/
+
