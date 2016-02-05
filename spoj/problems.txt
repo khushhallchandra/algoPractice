@@ -12,4 +12,6 @@
 
 7. monk.cpp	    -> https://www.hackerearth.com/problem/algorithm/the-confused-monk/
 
-8. absp1.cpp	    -> http://www.spoj.com/submit/ABSP1/
+8. ABSP1.cpp	    -> http://www.spoj.com/submit/ABSP1/
+
+9. AMR11E.cpp	    -> http://www.spoj.com/problems/AMR11E/
