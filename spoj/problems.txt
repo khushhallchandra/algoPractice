@@ -1,10 +1,10 @@
-1. countZeroes.cpp  -> http://www.spoj.com/problems/FCTRL/
+1. FCTRL.cpp  -> http://www.spoj.com/problems/FCTRL/
 
-2. sop.cpp	    -> http://www.spoj.com/problems/SUMPRO/
+2. SUMPRO.cpp	    -> http://www.spoj.com/problems/SUMPRO/
 
-3. addrev.cpp       -> http://www.spoj.com/problems/ADDREV/
+3. ADDREV.cpp       -> http://www.spoj.com/problems/ADDREV/
 
-4. div.cpp 	    -> http://www.spoj.com/problems/SMPDIV/
+4. SMPDIV.cpp 	    -> http://www.spoj.com/problems/SMPDIV/
 
 5. oddDivisor.cpp   -> https://www.hackerearth.com/problem/algorithm/dipu-and-interesting-numbers-2/
 
@@ -17,3 +17,5 @@
 9. AMR11E.cpp	    -> http://www.spoj.com/problems/AMR11E/
 
 10.HS12MBR.cpp      -> http://www.spoj.com/problems/HS12MBR/
+
+11.NSTEPS.cpp	    ->http://www.spoj.com/problems/NSTEPS/
