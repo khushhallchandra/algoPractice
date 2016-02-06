@@ -15,3 +15,5 @@
 8. ABSP1.cpp	    -> http://www.spoj.com/submit/ABSP1/
 
 9. AMR11E.cpp	    -> http://www.spoj.com/problems/AMR11E/
+
+10.HS12MBR.cpp      -> http://www.spoj.com/problems/HS12MBR/
