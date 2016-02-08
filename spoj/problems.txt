@@ -19,3 +19,5 @@
 10.HS12MBR.cpp      -> http://www.spoj.com/problems/HS12MBR/
 
 11.NSTEPS.cpp	    ->http://www.spoj.com/problems/NSTEPS/
+
+12.TEST.cpp	    ->http://www.spoj.com/problems/TEST/
