@@ -21,3 +21,5 @@
 11.NSTEPS.cpp	    ->http://www.spoj.com/problems/NSTEPS/
 
 12.TEST.cpp	    ->http://www.spoj.com/problems/TEST/
+
+13.IITWPC4D.cpp	    ->http://www.spoj.com/problems/IITWPC4D/
