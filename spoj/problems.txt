@@ -1,4 +1,4 @@
-1. FCTRL.cpp  -> http://www.spoj.com/problems/FCTRL/
+1. FCTRL.cpp  	    -> http://www.spoj.com/problems/FCTRL/
 
 2. SUMPRO.cpp	    -> http://www.spoj.com/problems/SUMPRO/
 
@@ -27,3 +27,5 @@
 14.BUSYMAN.cpp	    ->http://www.spoj.com/problems/BUSYMAN/
 
 15.SPEED.cpp	    ->http://www.spoj.com/problems/SPEED/
+
+16.TWOSQRS.cpp	    ->http://www.spoj.com/problems/TWOSQRS/
