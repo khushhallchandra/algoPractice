@@ -25,3 +25,5 @@
 13.IITWPC4D.cpp	    ->http://www.spoj.com/problems/IITWPC4D/
 
 14.BUSYMAN.cpp	    ->http://www.spoj.com/problems/BUSYMAN/
+
+15.SPEED.cpp	    ->http://www.spoj.com/problems/SPEED/
