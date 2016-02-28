@@ -29,3 +29,5 @@
 15.SPEED.cpp	    ->http://www.spoj.com/problems/SPEED/
 
 16.TWOSQRS.cpp	    ->http://www.spoj.com/problems/TWOSQRS/
+
+17.AMR11A_a.cpp	    ->http://www.spoj.com/problems/AMR11A/ 
