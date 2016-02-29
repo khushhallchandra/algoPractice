@@ -30,4 +30,6 @@
 
 16.TWOSQRS.cpp	    ->http://www.spoj.com/problems/TWOSQRS/
 
-17.AMR11A_a.cpp	    ->http://www.spoj.com/problems/AMR11A/ 
+17.AMR11A_a.cpp	    ->http://www.spoj.com/problems/AMR11A/
+
+18.ONP.cpp	    ->http://www.spoj.com/problems/ONP/ 
