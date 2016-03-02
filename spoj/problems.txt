@@ -34,4 +34,8 @@
 
 18.ONP.cpp	    ->http://www.spoj.com/problems/ONP/ 
 
-19.ARMY.cpp	    ->http://www.spoj.com/problems/ARMY/ 
+19.ARMY.cpp	    ->http://www.spoj.com/problems/ARMY/
+
+20.ALIEN.cpp	    ->http://www.spoj.com/problems/ALIEN/
+
+19.HOTELS.cpp	    ->http://www.spoj.com/problems/HOTELS/ 
