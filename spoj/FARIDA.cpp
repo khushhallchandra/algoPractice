@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -14,8 +15,7 @@ int main(){
             dp[j+1][0] = max(dp[j][0], dp[j][1]);
             dp[j+1][1] = dp[j][0] + coins;
         }
-		val = dp[N][0]>dp[N][1]?dp[N][0]:dp[N][1];
-        cout<<"Case "<<i+1<<": "<<val<<endl;
+        cout<<"Case "<<i+1<<": "<<max(dp[N][0], dp[N][1])<<endl;
     }
     return 0;
 }
