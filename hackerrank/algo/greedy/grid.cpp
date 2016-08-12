@@ -5,10 +5,11 @@
 using namespace std;
 
 int main(){
-	int T, N, check=1;
+	int T, N, check;
 	string temp;
 	cin>>T;
 	while(T--){
+		check=1;
 		vector<string> vec;
 		cin>>N;
 		vector<char> vec1(N);
@@ -18,12 +19,16 @@ int main(){
 		}
 		for(int i=0;i<N;i++)
 			sort(vec[i].begin(), vec[i].end());
-		for(int i=0;i<N;i++){
-			if(!is_sorted(vec[i].begin(), vec[i].end())){
-				check = 0;
-				break;
-			}
 
+		for(int j=0;j<N;j++){
+			for(int i=0;i<N-1;i++){
+				if(vec[i][j]>vec[i+1][j]){
+					check = 0;
+					break;
+				}
+			}
+			if(check==0)
+				break;
 		}
 		if(check==1)
 			cout<<"YES\n";
