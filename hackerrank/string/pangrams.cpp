@@ -3,16 +3,18 @@
 using namespace std;
 
 int main() {
-    string s,out="pangram";
-    cin>>s;
+    string out="pangram";
+    string s;
+	getline(cin, s);
     int i=0,ch;
     vector<int> vec(26,0);
     // cout<<vec.size()<<vec[0]<<endl;
     // cout<<(int)s[i+1]<<endl<<(int)s[i];
-    i=vec.size();
+    i=s.length();
+    // cout<<i;
     while(i--){
-    	ch = (int)s[i];
-    	// cout<<ch<<"kcm"<<endl;
+    	ch = s[i];
+    	// cout<<ch<<"this is char"<<i<<endl;
     	if(ch>=65 && ch<=90){
     		ch -= 65;
     		// cout<<"kc";
