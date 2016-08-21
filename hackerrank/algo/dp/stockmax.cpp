@@ -18,12 +18,6 @@ int main()
             continue;
         temp = 0;
         long long int out = 0;
-        // for (int i=N-1; i>=0; --i){
-        //     temp = max(temp, stock_price[i]);
-        //     out += temp - stock_price[i];
-        // }
-
-
 
         temp = stock_price[N-1];
         for(int i = N-1; i >= 0; i--){
@@ -31,10 +25,7 @@ int main()
                 temp = stock_price[i];
             }            
             out += (temp - stock_price[i]);
-}
-
-
-
+        }
         cout<<out<<endl;
     }
   return 0;
