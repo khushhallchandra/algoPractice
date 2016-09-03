@@ -5,14 +5,13 @@ using namespace std;
 
 int main(){
  
-    int T;
+    int T, n, k;;
     cin>>T;
     
-    int n, k;
     while(T--){
-    	vector<int> dp(n,0);
-    	vector <int> a(n);
-        cin >> n >> k;
+    	cin >> n >> k;
+    	vector<int> dp(k+1,0), a(n);
+        
         for(int i = 0;i < n; ++i)
             cin >> a[i];
        
