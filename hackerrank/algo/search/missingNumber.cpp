@@ -2,33 +2,26 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
-int main(){
  
-    int n, m;
+#define MAX 10001
+ 
+int main() {
+	std::vector<int> vec(MAX,0);
+
+    int n, temp;
     cin>>n;
-    std::vector<int> b(n);
-    for(int i=0;i<n;i++)
-    	cin>>b[i];
-
-    cin>>m;
-    std::vector<int> a(m);
-    for(int i=0;i<m;i++)
-    	cin>>a[i];    
-    sort(b.begin(),b.end());
-    sort(a.begin(),a.end());
-
-    int i=0,j=0;
-    while(i<m && j<n){
-
-    	if (binary_search (a.begin()+i, a.end(), b[j])){
-    		i++;
-    		j++;
-    	}
-    	else{
-    		cout<<a[i]<<" ";
-    		i++;
-    	}
+    for(int i=0; i<n; i++){
+        cin>>temp;
+        vec[temp]+=1;
     }
+    cin>>n;
+    for(int i=0; i<n; i++){
+        cin>>temp;
+        vec[temp]-=1;
+    }
+    for(int i =0; i<MAX; i++)
+        if(vec[i]<0)
+        	cout<<i<<" ";
+
     return 0;
 }
