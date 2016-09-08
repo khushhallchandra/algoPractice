@@ -1,36 +1,43 @@
-// https://www.hackerrank.com/challenges/palindrome-index
-
+	// https://www.hackerrank.com/challenges/palindrome-index
 #include <bits/stdc++.h>
-
 using namespace std;
 
 string str;
 
-bool isPalindrome(int start,int end){
-	//[start,end)
-	bool out = 1;
-	int mid = (start+end)/2;
-	for(int i=start;i<=mid;i++){
-		if(str[i] != str[end-1-i]){
-			out = 0;
+bool isPalindrome(int s,int e){
+	while(s<e){
+		if(str[s] != str[e]){
+			return 0;
 			break;
 		}
+		s++;
+		e--;
 	}
-	return out;
+	return 1;
 }
+
 int main(){
-	string str;
-	int T;
+	int T,l;
 	cin>>T;
 	while(T--){
 		cin>>str;
 		l = str.length();
-		if(isPalindrome(0,l))
+
+		if(isPalindrome(0,l-1)){
 			cout<<"-1\n";
-		for(int i=0;i<l;i++){
-			if(isPalindrome(i+1))
+			continue;
 		}
 
+		for(int i=0;i<l/2;i++){
+			if(isPalindrome(i+1,l-1-i)){		
+				cout<<i<<"\n";
+				break;
+			}
+			if(isPalindrome(i,l-1-1-i)){
+				cout<<l-1-i<<"\n";
+				break;
+			}			
+		}
 	}
 	return 0;
 }
