@@ -5,21 +5,21 @@
 using namespace std;
 
 int main(){
-    int N;
+    vector<int> vec(1001,0);
+    int N, temp;
     cin >> N;
-    vector<int> vec(N);
     for(int i=0; i<N; i++){
-        cin>>vec[i];
+        cin>>temp;
+        vec[temp] ++;
     }
-    sort(vec.begin(),vec.end());
-    int min = vec[0];
-    for(int i = 0; i<N; i++){
-        for(int j=0; j<N; j++){
-
-            
+    cout<<N<<endl;
+    for(int i=0; i<1001;i++){
+        if(vec[i]!=0 ) {
+            N -= vec[i] ;
+            if(N==0)
+                break;
+            cout<<N<<endl;
         }
-    }
-
-    
+    }  
     return 0;
 }
