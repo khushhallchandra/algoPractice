@@ -36,11 +36,11 @@ int main(){
     if(solveMaze(maze, 0, 0, sol) == false)
         cout<<"No solution\n";
     else{
-		for(int i=0; i<N; i++)
-            for(int j=0; j<N; j++){
+		for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++)
 				cout<<sol[i][j]<<" ";
-			}
-		cout<<"\n";
+			cout<<endl;
+		}
 	}
     return 0;
 }
