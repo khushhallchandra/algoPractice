@@ -23,3 +23,4 @@ int main() {
         cout<<max(table[n-1][0], table[n-1][1])<<endl;
     }
     return 0;
+}
