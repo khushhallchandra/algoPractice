@@ -1,26 +1,44 @@
-// https://www.hackerrank.com/challenges/ctci-balanced-brackets
+// https://www.hackerrank.com/challenges/ctci-balanced-expressions
 #include <bits/stdc++.h>
 
 using namespace std;
 
 bool is_balanced(string expression){
-    int n = expression.length();
-    if(n%2 == 1)
-        return false;
 
-    for(int i =0; i<n/2; i++){
-        if((expression[i] == '{') && (expression[n-1-i] == '}'))
-            continue;
-        else
-        if((expression[i] == '[') && (expression[n-1-i] == ']'))
-            continue;
-        else
-        if((expression[i] == '(') && (expression[n-1-i] == ')'))
-            continue;
-        else
-            return false; 
+    stack<char> stk;
+
+    int n = expression.length();
+
+    for(int i=0; i<n; i++){
+        if(expression[i] == '{' || expression[i] == '(' || expression[i] == '[')
+            stk.push(expression[i]);
+        else{
+            if(stk.size()>0){
+                if(expression[i] == '}')
+                    if(stk.top() == '{')
+                        stk.pop();
+                    else
+                        return 0;
+
+                else if(expression[i] == ')')
+                    if(stk.top() == '(')
+                        stk.pop();
+                    else
+                        return 0;
+
+                else if(expression[i] == ']')
+                    if(stk.top() == '[')
+                        stk.pop();
+                    else
+                        return 0;                    
+            }
+        }
     }
-    return true;
+
+    if(stk.size() != 0)
+        return 0;
+
+    return 1;
 }
 
 int main(){
